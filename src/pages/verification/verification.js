@@ -1,3 +1,15 @@
+const qiniuUploader = require('../../utils/qiniuUploader')
+
+// 初始化七牛相关参数
+function initQiniu () {
+  var options = {
+    region: 'ECN', // 华东区，生产环境应换成自己七牛帐户bucket的区域
+    uptokenURL: 'https://aime.getweapp.com/qiniu/uptoken', // 生产环境该地址应换成自己七牛帐户的token地址，具体配置请见server端
+    domain: 'https://oh39iobj6.qnssl.com/' // 生产环境该地址应换成自己七牛帐户对象存储的域名
+  }
+  qiniuUploader.init(options)
+}
+
 function getRandomColor () {
   const rgb = []
   for (let i = 0; i < 3; ++i) {
@@ -27,14 +39,42 @@ Page({
         time: 3
       }]
   },
+  handleRoute () {
+    wx.navigateTo({
+      url: '../people/people'// 实际路径要写全
+    })
+  },
+  takePhoto () {
+    const ctx = wx.createCameraContext()
+    ctx.takePhoto({
+      quality: 'high',
+      success: (res) => {
+        this.setData({
+          src: res.tempImagePath
+        })
+      }
+    })
+  },
+  error (e) {
+    console.log(e.detail)
+  },
   bindInputBlur (e) {
     this.inputValue = e.detail.value
   },
-  bindButtonTap () {
-    // initQiniu()
+  getCode () {
+    wx.scanCode({
+      onlyFromCamera: true,
+      success (res) {
+        console.log(res)
+      }
+    })
+  },
+  getVideo () {
+    initQiniu()
     var that = this
     wx.chooseVideo({
-      sourceType: ['camera', 'album'],
+      // sourceType: ['camera', 'album'],
+      sourceType: ['camera'],
       camera: 'front',
       maxDuration: 40,
       success: function (res) {
@@ -42,6 +82,15 @@ Page({
         console.log(res)
         that.setData({
           src: res.tempFilePath
+        })
+        var filePath = res.tempFilePath || res.tempFilePaths[0]
+        // 交给七牛上传
+        qiniuUploader.upload(filePath, (res) => {
+          that.setData({
+            'imageObject': res
+          })
+        }, (error) => {
+          console.error('error: ' + JSON.stringify(error))
         })
         // 七牛上传文件
         // var vedioObject = res
