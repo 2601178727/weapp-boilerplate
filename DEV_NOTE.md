@@ -26,9 +26,15 @@
 ##### 路由跳转
 > https://www.jianshu.com/p/98a76d1bc40b
 
+##### 扫描普通二维码打开小程序
+> https://developers.weixin.qq.com/miniprogram/introduction/qrcode.html#%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B
+
 
 - [ ] 是否需要websocket长连接 
 - [ ] 如何判断用户开始核验
 - [ ] 核验时长控制
 - [ ] 七牛云
 - [ ] 百度大脑人脸识别——腾讯云
+- [ ] 扫描二维码，跳转指定页面
+- [ ] 扫描二维码会不会有数据丢失
+- [ ] 二维码有效时间
