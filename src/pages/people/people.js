@@ -7,6 +7,18 @@ Page({
     ctx.stopRecord({
       success: (res) => {
         console.log(res)
+        wx.request({
+          url: 'http://106.14.135.95:3000/note/getDetail?id=529',
+          header: {
+            'content-type': 'application/json;charset=UTF-8'
+          },
+          success: function (res) {
+            // 参数值为res.data,直接将返回的数据传入
+            console.log(res)
+          },
+          fail: function () {
+          }
+        })
         this.setData({
           src: res.tempThumbPath
         })
