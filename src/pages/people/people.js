@@ -1,13 +1,22 @@
+var API = require('../../utils/API')
+
 Page({
   onReady (res) {
     this.videoContext = wx.createVideoContext('myVideo')
+    this.Api = new API()
   },
   takeVideoEnd () {
     const ctx = wx.createCameraContext()
     ctx.stopRecord({
       success: (res) => {
         console.log(res)
-        wx.request({
+        this.Api.upload('https://www.yangyiyuan.online:3000/upload', res.tempVideoPath).then(
+          ret => console.log(ret)
+        )
+        /* this.Api.get('http://106.14.135.95:3000/note/getDetail?id=529').then(
+          ret => console.log(ret)
+        ) */
+        /* wx.request({
           url: 'http://106.14.135.95:3000/note/getDetail?id=529',
           header: {
             'content-type': 'application/json;charset=UTF-8'
@@ -18,7 +27,7 @@ Page({
           },
           fail: function () {
           }
-        })
+        }) */
         this.setData({
           src: res.tempThumbPath
         })

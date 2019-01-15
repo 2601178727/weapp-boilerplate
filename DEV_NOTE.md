@@ -38,6 +38,12 @@
 ##### 小程序网络请求
 > https://blog.csdn.net/single_cong/article/details/80340934
 
+##### 小程序定制键盘
+> https://blog.csdn.net/qq_41629498/article/details/81747403
+
+##### 小程序长链接
+> https://juejin.im/post/5b5ad3c16fb9a04fab451c9d
+
 
 - [ ] 是否需要websocket长连接 
 - [ ] 如何判断用户开始核验
