@@ -11,6 +11,9 @@
 ##### 百度人脸识别
 > http://ai.baidu.com/docs#/Face-Detect-V3/top
 
+##### 腾讯云人脸识别
+> https://blog.csdn.net/qcloudcommunity/article/details/82260089
+
 ##### 微信小程序自定义拍照页面开发
 > https://blog.csdn.net/u010606780/article/details/80887589
 
