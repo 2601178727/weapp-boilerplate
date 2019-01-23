@@ -47,6 +47,20 @@
 ##### 小程序长链接
 > https://juejin.im/post/5b5ad3c16fb9a04fab451c9d
 
+##### 产品定价
+> https://cloud.tencent.com/product/facein/pricing
+
+
+##### 小程序中循环模板
+```
+<view wx:for="{{viewData}}" :key="index" class="home_handle_item">
+      <view class="item_body">
+        <text>{{item.title}}</text>
+        <text>{{item.subtitle}}</text>
+      </view>
+      <image class="item_ico_image" src="{{item.url}}"></image>
+    </view>
+```
 
 - [ ] 是否需要websocket长连接 
 - [ ] 如何判断用户开始核验

@@ -1,0 +1,51 @@
+@import '../../fetch/config.less';
+
+.home_page_box {
+  .home_banner_box {
+    width: 100%;
+    height: @banner_height;
+    border: 1px solid #e2e1e1;
+  }
+  .home_handle_box {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid @border_color;
+  
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0 @padding_auto;
+    .home_handle_item {
+      width: 100%;
+      height: @handle_item_height;
+      border-bottom: 1px solid @border_color;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      &:last-child {
+        border: 0;
+      }
+      .item_body {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .item_title {
+          font-size: 1.15rem;
+          color: #333;
+        }
+        .item_subtitle {
+          font-size: .81rem;
+          color: #999;
+        }
+      }
+      .item_ico_image {
+        width: 1.5rem;
+        height: auto;
+      }
+    }
+  }  
+}
