@@ -8,6 +8,7 @@ module.exports = {
   globals: {
     App: true,
     Page: true,
+    Component: true,
     getApp: true,
     wx: true
   }

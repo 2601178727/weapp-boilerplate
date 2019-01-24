@@ -21,23 +21,5 @@
     </view>
   </view>
   <!-- 提示信息 -->
-  <view class="message_box">
-    <view class="info_item">
-      <cover-image class="info_ico" src="../../images/home/message.png"></cover-image>
-      <text class="info_message">您有一条待完成事项</text>
-      <text class="info_time">10分钟前</text>
-    </view>
-    <view>
-      <text class="info_account">天津市某某某某某某酒店</text>
-    </view>
-    <view class="info_detail">
-      <text>*轩逸/120************579</text>
-    </view>
-
-    <view class="has_message">
-      <text class="message_text">待核验</text>
-      <view class="new_message"></view>
-      <cover-image class="message_ico" src="../../images/home/arrow.png"></cover-image>
-    </view>
-  </view>
+  <message-box inner-text='Some'></message-box>
 </view>
