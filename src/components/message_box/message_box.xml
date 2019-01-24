@@ -1,4 +1,4 @@
-<view class="message_box">
+<view class="message_box" bindtap="getDetail">
   <view class="info_item">
     <cover-image class="info_ico" src="../../images/home/message.png"></cover-image>
     <text class="info_message">您有一条待完成事项</text>

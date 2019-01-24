@@ -7,7 +7,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    hasAccount: false // 是否有公司信息
+    hasAccount: false, // 是否有公司信息
+    messageData: {
+      a: 1
+    }
   },
 
   handleSearch () { // 扫一扫
