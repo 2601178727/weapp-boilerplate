@@ -1,4 +1,6 @@
-<view class="container">
-  <text class="title">{{ title }}</text>
-  <view class="button">123</view>
+<view class="message_box">
+  <view class="tab_nav">
+    <text>进行中</text>
+    <text>已完成</text>
+  </view>
 </view>

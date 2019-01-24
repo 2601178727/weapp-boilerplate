@@ -1,13 +1,23 @@
 <!-- 可用组件：https://mp.weixin.qq.com/debug/wxadoc/dev/component/ -->
 <view class="home_page_box">
+<!-- banner -->
   <cover-image class="home_banner_box" src="../../images/home/banner.png"></cover-image>
+  <!-- 扫一扫 -->
   <view class="home_handle_box">
-    <view wx:for="{{viewData}}" wx:key="index" class="home_handle_item">
+    <view class="home_handle_item" bindtap="handleSearch">
       <view class="item_body">
-        <text class="item_title">{{item.title}}</text>
-        <text class="item_subtitle">{{item.subtitle}}</text>
+        <text class="item_title">扫一扫</text>
+        <text class="item_subtitle">扫描二维码获取酒店信息</text>
       </view>
-      <cover-image class="item_ico_image" :src="{{item.url}}"></cover-image>
+      <cover-image class="item_ico_image" src="../../images/home/load.png"></cover-image>
+    </view>
+    <!-- 人像比对 -->
+    <view class="home_handle_item" bindtap="handleComparison">
+      <view class="item_body">
+        <text class="item_title">人像比对</text>
+        <text class="item_subtitle">入住前需先进行人像比对验证</text>
+      </view>
+      <cover-image class="item_ico_image" src="../../images/home/master.png"></cover-image>
     </view>
   </view>
 </view>

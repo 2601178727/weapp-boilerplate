@@ -7,15 +7,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-    viewData: [{
-      title: '扫一扫',
-      subtitle: '扫描二维码获取酒店信息',
-      url: '../../images/home/load.png'
-    }, {
-      title: '人像比对',
-      subtitle: '入住前需先进行人像比对验证',
-      url: '../../images/home/master.png'
-    }]
+    hasAccount: false // 是否有公司信息
+  },
+
+  handleSearch () { // 扫一扫
+    console.log('扫一扫')
+  },
+
+  handleComparison () { // 比对
+    console.log('比对')
+    wx.showModal({
+      title: '提示',
+      content: '这是一个模态弹窗',
+      success (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
   },
 
   /**
