@@ -7,7 +7,8 @@
     "pages/verification/verification",
     "pages/record/record",
     "pages/myself/myself",
-    "pages/people/people"
+    "pages/people/people",
+    "pages/entrance/entrance"
     // Dont remove this comment
   ],
   // Window configuration

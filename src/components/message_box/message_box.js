@@ -16,7 +16,7 @@ Component({
     },
     getDetail () {
       wx.navigateTo({
-        url: '../people/people'// 实际路径要写全
+        url: '../../pages/entrance/entrance'// 实际路径要写全
       })
     }
   },
